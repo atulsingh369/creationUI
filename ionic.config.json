@@ -1,0 +1,7 @@
+{
+  "name": "creationUI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
