@@ -1,8 +1,359 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title class="bgColor">Home</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-  <div class="example-content bgColor">home content</div>
-</ion-content>
+<ion-menu contentId="main-content">
+  <ion-header class="ion-padding">
+    <ion-avatar><img src="../../assets//user.png" alt="user" /></ion-avatar>
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header no-border>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center">Home</ion-title>
+      <ion-buttons slot="end">
+        <ion-button
+          ><ion-icon
+            class="productIcon"
+            color="black"
+            name="notifications-outline"
+          ></ion-icon
+        ></ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div id="search" class="search-input-keyword">
+      <ion-searchbar
+        class="ion-searchtext"
+        id="ion-searchtext"
+        placeholder="Find a medicine"
+        debounce="1"
+      ></ion-searchbar>
+    </div>
+
+    <swiper-container
+      id="carousel"
+      loop="true"
+      autoplay="true"
+      pagination="true"
+    >
+      <swiper-slide id="carouselItem" class="slide1">
+        <img src="../../assets/im2 (1).png" alt="slide1" />
+        <ion-button class="order" color="white">Order Now</ion-button>
+      </swiper-slide>
+      <swiper-slide id="carouselItem">
+        <img src="../../assets/im3 (1).png" alt="slide2" />
+      </swiper-slide>
+      <swiper-slide id="carouselItem">
+        <img src="../../assets/im4 (1).png" alt="slide3" />
+      </swiper-slide>
+    </swiper-container>
+
+    <ion-card class="uploadPrescription ion-padding">
+      <ion-icon
+        size="large"
+        class="ion-float-left"
+        name="documents-outline"
+      ></ion-icon>
+      <span class="uploadText">
+        <h4 style="color: black">Upload your prescription</h4>
+        <ion-text>Lorem ipsum dolor sit amet, consectetur</ion-text>
+      </span>
+      <ion-button class="ion-float-end" color="primary">Upload</ion-button>
+    </ion-card>
+
+    <ion-card class="categories ion-padding">
+      <div class="flex-between">
+        <ion-text class="ion-float-left ion-color-secondary"
+          >Categories</ion-text
+        >
+        <ion-text class="ion-float-end ion-color-secondary">See All</ion-text>
+      </div>
+      <ion-grid>
+        <ion-row class="catList">
+          <ion-col
+            ><div class="catItem">
+              <img
+                src="../../assets/category.png"
+                width="50px"
+                alt="category1"
+              />
+              <ion-text-center>Harpic GOLD</ion-text-center>
+            </div></ion-col
+          >
+          <ion-col
+            ><div class="catItem">
+              <img
+                src="../../assets/category.png"
+                width="50px"
+                alt="category1"
+              />
+              <ion-text-center>Harpic GOLD</ion-text-center>
+            </div></ion-col
+          >
+          <ion-col
+            ><div class="catItem">
+              <img
+                src="../../assets/category.png"
+                width="50px"
+                alt="category1"
+              />
+              <ion-text-center>Harpic GOLD</ion-text-center>
+            </div></ion-col
+          >
+          <ion-col
+            ><div class="catItem">
+              <img
+                src="../../assets/category.png"
+                width="50px"
+                alt="category1"
+              />
+              <ion-text-center>Harpic GOLD</ion-text-center>
+            </div></ion-col
+          >
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+    <div class="ion-padding">
+      <div class="flex-between">
+        <ion-text slot="start">Popular Product</ion-text>
+        <ion-text slot="right">See All</ion-text>
+      </div>
+      <div class="productList">
+        <div class="productRow">
+          <ion-card id="productCard" class="ion-padding">
+            <div id="productImg">
+              <span id="productHeart"
+                ><ion-icon color="black" name="heart-outline"></ion-icon
+              ></span>
+              <img
+                src="../../assets/category.png"
+                class="productImage"
+                alt="productImg"
+              />
+            </div>
+            <div id="productDetails">
+              <h5>Harpic GOLD</h5>
+              <ion-text
+                >MRP
+                <span style="text-decoration: line-through"
+                  >₹190</span
+                ></ion-text
+              >
+              <div class="flex-between">
+                <ion-text
+                  color="primary"
+                  style="font-size: 15px; font-weight: 900"
+                  >₹152</ion-text
+                >
+                <ion-text color="primary">20% off</ion-text>
+              </div>
+              <div class="flex-between">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon color="medium" name="star"></ion-icon>
+                <ion-text>(124)</ion-text>
+              </div>
+            </div>
+          </ion-card>
+          <ion-card id="productCard" class="ion-padding">
+            <div id="productImg">
+              <span id="productHeart"
+                ><ion-icon color="black" name="heart-outline"></ion-icon
+              ></span>
+              <img
+                src="../../assets/category.png"
+                class="productImage"
+                alt="productImg"
+              />
+            </div>
+            <div id="productDetails">
+              <h5>Harpic GOLD</h5>
+              <ion-text
+                >MRP
+                <span style="text-decoration: line-through"
+                  >₹190</span
+                ></ion-text
+              >
+              <div class="flex-between">
+                <ion-text
+                  color="primary"
+                  style="font-size: 15px; font-weight: 900"
+                  >₹152</ion-text
+                >
+                <ion-text color="primary">20% off</ion-text>
+              </div>
+              <div class="flex-between">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon color="medium" name="star"></ion-icon>
+                <ion-text>(124)</ion-text>
+              </div>
+            </div>
+          </ion-card>
+        </div>
+        <div class="productRow">
+          <ion-card id="productCard" class="ion-padding">
+            <div id="productImg">
+              <span id="productHeart"
+                ><ion-icon color="black" name="heart-outline"></ion-icon
+              ></span>
+              <img
+                src="../../assets/category.png"
+                class="productImage"
+                alt="productImg"
+              />
+            </div>
+            <div id="productDetails">
+              <h5>Harpic GOLD</h5>
+              <ion-text
+                >MRP
+                <span style="text-decoration: line-through"
+                  >₹190</span
+                ></ion-text
+              >
+              <div class="flex-between">
+                <ion-text
+                  color="primary"
+                  style="font-size: 15px; font-weight: 900"
+                  >₹152</ion-text
+                >
+                <ion-text color="primary">20% off</ion-text>
+              </div>
+              <div class="flex-between">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon color="medium" name="star"></ion-icon>
+                <ion-text>(124)</ion-text>
+              </div>
+            </div>
+          </ion-card>
+
+          <ion-card id="productCard" class="ion-padding">
+            <div id="productImg">
+              <span id="productHeart"
+                ><ion-icon color="black" name="heart-outline"></ion-icon
+              ></span>
+              <img
+                src="../../assets/category.png"
+                class="productImage"
+                alt="productImg"
+              />
+            </div>
+            <div id="productDetails">
+              <h5>Harpic GOLD</h5>
+              <ion-text
+                >MRP
+                <span style="text-decoration: line-through"
+                  >₹190</span
+                ></ion-text
+              >
+              <div class="flex-between">
+                <ion-text
+                  color="primary"
+                  style="font-size: 15px; font-weight: 900"
+                  >₹152</ion-text
+                >
+                <ion-text color="primary">20% off</ion-text>
+              </div>
+              <div class="flex-between">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon color="medium" name="star"></ion-icon>
+                <ion-text>(124)</ion-text>
+              </div>
+            </div>
+          </ion-card>
+        </div>
+        <div class="productRow">
+          <ion-card id="productCard" class="ion-padding">
+            <div id="productImg">
+              <span id="productHeart"
+                ><ion-icon color="black" name="heart-outline"></ion-icon
+              ></span>
+              <img
+                src="../../assets/category.png"
+                class="productImage"
+                alt="productImg"
+              />
+            </div>
+            <div id="productDetails">
+              <h5>Harpic GOLD</h5>
+              <ion-text
+                >MRP
+                <span style="text-decoration: line-through"
+                  >₹190</span
+                ></ion-text
+              >
+              <div class="flex-between">
+                <ion-text
+                  color="primary"
+                  style="font-size: 15px; font-weight: 900"
+                  >₹152</ion-text
+                >
+                <ion-text color="primary">20% off</ion-text>
+              </div>
+              <div class="flex-between">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon color="medium" name="star"></ion-icon>
+                <ion-text>(124)</ion-text>
+              </div>
+            </div>
+          </ion-card>
+          <ion-card id="productCard" class="ion-padding">
+            <div id="productImg">
+              <span id="productHeart"
+                ><ion-icon color="black" name="heart-outline"></ion-icon
+              ></span>
+              <img
+                src="../../assets/category.png"
+                class="productImage"
+                alt="productImg"
+              />
+            </div>
+            <div id="productDetails">
+              <h5>Harpic GOLD</h5>
+              <ion-text
+                >MRP
+                <span style="text-decoration: line-through"
+                  >₹190</span
+                ></ion-text
+              >
+              <div class="flex-between">
+                <ion-text
+                  color="primary"
+                  style="font-size: 15px; font-weight: 900"
+                  >₹152</ion-text
+                >
+                <ion-text color="primary">20% off</ion-text>
+              </div>
+              <div class="flex-between">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon color="medium" name="star"></ion-icon>
+                <ion-text>(124)</ion-text>
+              </div>
+            </div>
+          </ion-card>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</div>
